@@ -8,7 +8,7 @@ public class Voiture extends Vehicule {
         this.nbPortes = nbPortes;
     }
 
-    @Override
+    @Override //Annotation Java pour indiquer la redéfinition
     public void stationner() {
         System.out.println("La voiture se gare dans une place standard.");
     }
