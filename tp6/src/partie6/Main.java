@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 1. stocker les livres dans un ArrayList
+        
         ArrayList<Livre> livres = new ArrayList<Livre>();
 
         livres.add(new Livre("ISBN001", "Java pour débutants", "Dupont", 2020));
@@ -29,7 +29,7 @@ public class Main {
             System.out.println("- " + cat);
         }
 
-        // 3. HashMap pour les emprunts étudiant -> livre
+       
         HashMap<String, String> emprunts = new HashMap<String, String>();
         emprunts.put("Ali", "ISBN001");
         emprunts.put("Sara", "ISBN003");
@@ -53,8 +53,8 @@ public class Main {
             System.out.println("Livre pas trouvé");
         }
 
-        // 5. supprimer un livre par isbn
-        System.out.println("\n Suppression du livre ISBN002 ==");
+     
+        System.out.println("\n Suppression du livre ISBN002");
         Livre aSupprimer = null;
         for (Livre l : livres) {
             if (l.isbn.equals("ISBN002")) {
@@ -65,8 +65,7 @@ public class Main {
             livres.remove(aSupprimer);
             System.out.println("Livre supprimé !");
         }
-
-        // 6. afficher tous les livres disponibles 
+ 
         System.out.println("\n Livres disponibles ");
         for (Livre l : livres) {
             if (!emprunts.containsValue(l.isbn)) {
@@ -74,7 +73,7 @@ public class Main {
             }
         }
 
-        // 7. rapport final
+    
         System.out.println("\n ....................RAPPORT FINA.................L");
         System.out.println("Nombre total de livres : " + livres.size());
         System.out.println("Nombre de catégories : " + categories.size());
